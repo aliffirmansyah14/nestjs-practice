@@ -1,11 +1,12 @@
-import { Module, Post } from '@nestjs/common';
-import { UserService } from './user/user.service';
-import { UserController } from './user/user.controller';
+import { Module } from '@nestjs/common';
+
 import {
   Connection,
   MySqlConnection,
   PostgresConnection,
 } from './connection/connection';
+import { UserController } from './user/user.controller.js';
+import { UserService } from './user/user.service';
 
 @Module({
   controllers: [UserController],
